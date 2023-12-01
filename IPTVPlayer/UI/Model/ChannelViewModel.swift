@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChannelViewModel {
+struct ChannelViewModel: StreamingData, Codable, Equatable {
     let logo: URL
     let title: String
     let currentShow: String

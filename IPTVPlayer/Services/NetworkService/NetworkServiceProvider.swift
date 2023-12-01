@@ -13,7 +13,7 @@ enum Result<T> {
     case empty
 }
 
-class NetworkServiceProvider<T: NetworkService> {
+final class NetworkServiceProvider<T: NetworkService> {
     var urlSession = URLSession.shared
 
     init() { }
