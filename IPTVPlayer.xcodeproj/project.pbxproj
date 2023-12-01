@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		7E21A3962B1A4B43000C1E06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3952B1A4B43000C1E06 /* AppDelegate.swift */; };
-		7E21A3982B1A4B43000C1E06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3972B1A4B43000C1E06 /* SceneDelegate.swift */; };
 		7E21A39A2B1A4B43000C1E06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3992B1A4B43000C1E06 /* ViewController.swift */; };
 		7E21A39D2B1A4B43000C1E06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A39B2B1A4B43000C1E06 /* Main.storyboard */; };
 		7E21A39F2B1A4B45000C1E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A39E2B1A4B45000C1E06 /* Assets.xcassets */; };
 		7E21A3A22B1A4B45000C1E06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A3A02B1A4B45000C1E06 /* LaunchScreen.storyboard */; };
+		7E21A3AB2B1A4C95000C1E06 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3AA2B1A4C95000C1E06 /* NetworkService.swift */; };
+		7E21A3AD2B1A4D28000C1E06 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3AC2B1A4D28000C1E06 /* NetworkServiceProvider.swift */; };
+		7E21A3AF2B1A4DAE000C1E06 /* ChannelsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3AE2B1A4DAE000C1E06 /* ChannelsNetworkService.swift */; };
+		7E21A3B32B1A523C000C1E06 /* ChannelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B22B1A523C000C1E06 /* ChannelsList.swift */; };
+		7E21A3B52B1A53CE000C1E06 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B42B1A53CE000C1E06 /* Channel.swift */; };
+		7E21A3B72B1A5665000C1E06 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B62B1A5665000C1E06 /* TVShow.swift */; };
+		7E21A3B92B1A5675000C1E06 /* ForeignPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E21A3922B1A4B43000C1E06 /* IPTVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPTVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E21A3952B1A4B43000C1E06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E21A3972B1A4B43000C1E06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E21A3992B1A4B43000C1E06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E21A39C2B1A4B43000C1E06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E21A39E2B1A4B45000C1E06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E21A3A12B1A4B45000C1E06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E21A3A32B1A4B45000C1E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E21A3AA2B1A4C95000C1E06 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7E21A3AC2B1A4D28000C1E06 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
+		7E21A3AE2B1A4DAE000C1E06 /* ChannelsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsNetworkService.swift; sourceTree = "<group>"; };
+		7E21A3B22B1A523C000C1E06 /* ChannelsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsList.swift; sourceTree = "<group>"; };
+		7E21A3B42B1A53CE000C1E06 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		7E21A3B62B1A5665000C1E06 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +68,8 @@
 		7E21A3942B1A4B43000C1E06 /* IPTVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				7E21A3A92B1A4C39000C1E06 /* Services */,
 				7E21A3952B1A4B43000C1E06 /* AppDelegate.swift */,
-				7E21A3972B1A4B43000C1E06 /* SceneDelegate.swift */,
 				7E21A3992B1A4B43000C1E06 /* ViewController.swift */,
 				7E21A39B2B1A4B43000C1E06 /* Main.storyboard */,
 				7E21A39E2B1A4B45000C1E06 /* Assets.xcassets */,
@@ -65,6 +77,36 @@
 				7E21A3A32B1A4B45000C1E06 /* Info.plist */,
 			);
 			path = IPTVPlayer;
+			sourceTree = "<group>";
+		};
+		7E21A3A92B1A4C39000C1E06 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7E21A3B02B1A519D000C1E06 /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7E21A3B02B1A519D000C1E06 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				7E21A3B12B1A51BE000C1E06 /* NetworkModels */,
+				7E21A3AE2B1A4DAE000C1E06 /* ChannelsNetworkService.swift */,
+				7E21A3AC2B1A4D28000C1E06 /* NetworkServiceProvider.swift */,
+				7E21A3AA2B1A4C95000C1E06 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		7E21A3B12B1A51BE000C1E06 /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				7E21A3B22B1A523C000C1E06 /* ChannelsList.swift */,
+				7E21A3B42B1A53CE000C1E06 /* Channel.swift */,
+				7E21A3B62B1A5665000C1E06 /* TVShow.swift */,
+				7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */,
+			);
+			path = NetworkModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +180,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E21A3AD2B1A4D28000C1E06 /* NetworkServiceProvider.swift in Sources */,
+				7E21A3B52B1A53CE000C1E06 /* Channel.swift in Sources */,
 				7E21A39A2B1A4B43000C1E06 /* ViewController.swift in Sources */,
+				7E21A3B92B1A5675000C1E06 /* ForeignPlayer.swift in Sources */,
+				7E21A3AF2B1A4DAE000C1E06 /* ChannelsNetworkService.swift in Sources */,
 				7E21A3962B1A4B43000C1E06 /* AppDelegate.swift in Sources */,
-				7E21A3982B1A4B43000C1E06 /* SceneDelegate.swift in Sources */,
+				7E21A3AB2B1A4C95000C1E06 /* NetworkService.swift in Sources */,
+				7E21A3B32B1A523C000C1E06 /* ChannelsList.swift in Sources */,
+				7E21A3B72B1A5665000C1E06 /* TVShow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +343,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +372,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
