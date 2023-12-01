@@ -19,6 +19,7 @@
 		7E21A3B52B1A53CE000C1E06 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B42B1A53CE000C1E06 /* Channel.swift */; };
 		7E21A3B72B1A5665000C1E06 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B62B1A5665000C1E06 /* TVShow.swift */; };
 		7E21A3B92B1A5675000C1E06 /* ForeignPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */; };
+		7E21A3BE2B1A60B0000C1E06 /* ImageViewWithLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3BD2B1A60B0000C1E06 /* ImageViewWithLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7E21A3B42B1A53CE000C1E06 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		7E21A3B62B1A5665000C1E06 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignPlayer.swift; sourceTree = "<group>"; };
+		7E21A3BD2B1A60B0000C1E06 /* ImageViewWithLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewWithLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		7E21A3942B1A4B43000C1E06 /* IPTVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				7E21A3BF2B1A62CD000C1E06 /* UI */,
 				7E21A3A92B1A4C39000C1E06 /* Services */,
 				7E21A3952B1A4B43000C1E06 /* AppDelegate.swift */,
 				7E21A3992B1A4B43000C1E06 /* ViewController.swift */,
@@ -82,6 +85,8 @@
 		7E21A3A92B1A4C39000C1E06 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7E21A3BC2B1A6056000C1E06 /* DataSourceService */,
+				7E21A3BA2B1A6018000C1E06 /* UserDefaultsService */,
 				7E21A3B02B1A519D000C1E06 /* NetworkService */,
 			);
 			path = Services;
@@ -107,6 +112,44 @@
 				7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */,
 			);
 			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		7E21A3BA2B1A6018000C1E06 /* UserDefaultsService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefaultsService;
+			sourceTree = "<group>";
+		};
+		7E21A3BC2B1A6056000C1E06 /* DataSourceService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSourceService;
+			sourceTree = "<group>";
+		};
+		7E21A3BF2B1A62CD000C1E06 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7E21A3C02B1A62E4000C1E06 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7E21A3C02B1A62E4000C1E06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E21A3C12B1A62F1000C1E06 /* ImageView+Loader */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E21A3C12B1A62F1000C1E06 /* ImageView+Loader */ = {
+			isa = PBXGroup;
+			children = (
+				7E21A3BD2B1A60B0000C1E06 /* ImageViewWithLoader.swift */,
+			);
+			path = "ImageView+Loader";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +227,7 @@
 				7E21A3B52B1A53CE000C1E06 /* Channel.swift in Sources */,
 				7E21A39A2B1A4B43000C1E06 /* ViewController.swift in Sources */,
 				7E21A3B92B1A5675000C1E06 /* ForeignPlayer.swift in Sources */,
+				7E21A3BE2B1A60B0000C1E06 /* ImageViewWithLoader.swift in Sources */,
 				7E21A3AF2B1A4DAE000C1E06 /* ChannelsNetworkService.swift in Sources */,
 				7E21A3962B1A4B43000C1E06 /* AppDelegate.swift in Sources */,
 				7E21A3AB2B1A4C95000C1E06 /* NetworkService.swift in Sources */,

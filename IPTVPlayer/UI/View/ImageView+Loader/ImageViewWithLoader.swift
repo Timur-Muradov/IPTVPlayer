@@ -1,12 +1,12 @@
 //
-//  ImageLoaderService.swift
+//  ImageViewWithLoader.swift
 //  IPTVPlayer
 //
 //  Created by Тимур Мурадов on 01.12.2023.
 //
 import UIKit
 
-final class ImageViewLoader: UIImageView {
+final class ImageViewWithLoader: UIImageView {
     
     let imageCache = NSCache<AnyObject, AnyObject>()
     var imageURL: URL?
