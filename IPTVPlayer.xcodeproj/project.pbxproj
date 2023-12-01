@@ -21,6 +21,7 @@
 		7E21A3B92B1A5675000C1E06 /* ForeignPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */; };
 		7E21A3BE2B1A60B0000C1E06 /* ImageViewWithLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3BD2B1A60B0000C1E06 /* ImageViewWithLoader.swift */; };
 		7E21A3C32B1A6E9F000C1E06 /* DataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3C22B1A6E9F000C1E06 /* DataSourceProvider.swift */; };
+		7E21A3C82B1A6F7C000C1E06 /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3C72B1A6F7C000C1E06 /* ChannelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		7E21A3B82B1A5675000C1E06 /* ForeignPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignPlayer.swift; sourceTree = "<group>"; };
 		7E21A3BD2B1A60B0000C1E06 /* ImageViewWithLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewWithLoader.swift; sourceTree = "<group>"; };
 		7E21A3C22B1A6E9F000C1E06 /* DataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceProvider.swift; sourceTree = "<group>"; };
+		7E21A3C72B1A6F7C000C1E06 /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		7E21A3BF2B1A62CD000C1E06 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				7E21A3C62B1A6F59000C1E06 /* Models */,
 				7E21A3C02B1A62E4000C1E06 /* View */,
 			);
 			path = UI;
@@ -145,6 +148,14 @@
 				7E21A3BD2B1A60B0000C1E06 /* ImageViewWithLoader.swift */,
 			);
 			path = "ImageView+Loader";
+			sourceTree = "<group>";
+		};
+		7E21A3C62B1A6F59000C1E06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E21A3C72B1A6F7C000C1E06 /* ChannelViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +235,7 @@
 				7E21A39A2B1A4B43000C1E06 /* ViewController.swift in Sources */,
 				7E21A3B92B1A5675000C1E06 /* ForeignPlayer.swift in Sources */,
 				7E21A3BE2B1A60B0000C1E06 /* ImageViewWithLoader.swift in Sources */,
+				7E21A3C82B1A6F7C000C1E06 /* ChannelViewModel.swift in Sources */,
 				7E21A3AF2B1A4DAE000C1E06 /* ChannelsNetworkService.swift in Sources */,
 				7E21A3962B1A4B43000C1E06 /* AppDelegate.swift in Sources */,
 				7E21A3AB2B1A4C95000C1E06 /* NetworkService.swift in Sources */,
