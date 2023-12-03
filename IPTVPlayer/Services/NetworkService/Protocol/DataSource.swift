@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol DataSource {
+    var channels: [ChannelViewModel] { get }
+    var favoriteChannels: [ChannelViewModel] { get }
+    func fetchChannelsList(_ completion: @escaping () -> Void)
+    func toggleFavorite(_ channels: [ChannelViewModel])
+}

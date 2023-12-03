@@ -13,7 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let dataSource = DataSourceBuilder.buildDataSource()
+        let rootViewController = window?.rootViewController as? ChannelsListViewController
+        rootViewController?.dataSource = dataSource
         return true
     }
 }

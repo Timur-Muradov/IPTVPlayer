@@ -10,5 +10,5 @@ import Foundation
 struct ForeignPlayer: Decodable {
     let sdk: String
     let url: String
-    let valid_from: Int
+    let validFrom: Int
 }

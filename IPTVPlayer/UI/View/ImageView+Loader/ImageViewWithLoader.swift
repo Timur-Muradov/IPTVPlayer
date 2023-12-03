@@ -9,8 +9,8 @@ import UIKit
 final class ImageViewWithLoader: UIImageView {
     
     let imageCache = NSCache<AnyObject, AnyObject>()
-    var imageURL: URL?
     let activityIndicator = UIActivityIndicatorView()
+    var imageURL: URL?
 
     func loadImageWithUrl(_ url: URL) {
         activityIndicator.color = .darkGray
@@ -32,9 +32,10 @@ final class ImageViewWithLoader: UIImageView {
         
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             if error != nil {
-                print(error as Any)
-                DispatchQueue.main.async(execute: {
-                    self.activityIndicator.stopAnimating()
+                debugPrint(error as Any)
+                DispatchQueue.main.async(execute: { [weak self] in
+                    guard let weakSelf = self else { return }
+                    weakSelf.activityIndicator.stopAnimating()
                 })
                 return
             }

@@ -8,9 +8,11 @@
 import Foundation
 
 protocol StreamingData {
-    var logo: URL { get }
+    var logo: URL? { get }
     var title: String { get }
     var currentShow: String { get }
-    var playlistURL: URL { get }
+    var playlistURL: URL? { get }
     var isFavorite: Bool { get }
+    
+    mutating func toggleFavorite()
 }
