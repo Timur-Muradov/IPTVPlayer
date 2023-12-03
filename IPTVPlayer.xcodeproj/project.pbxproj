@@ -44,6 +44,7 @@
 		7E21A3FC2B1CC48F000C1E06 /* SFPro_Font_License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A3EE2B1CC48F000C1E06 /* SFPro_Font_License.rtf */; };
 		7E21A3FD2B1CC48F000C1E06 /* SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A3EF2B1CC48F000C1E06 /* SFProText-Bold.ttf */; };
 		7E21A4002B1CD921000C1E06 /* ChannelCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3FF2B1CD921000C1E06 /* ChannelCellDelegate.swift */; };
+		7E8661DC2B1D123500AD55B1 /* ChannelSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8661DB2B1D123500AD55B1 /* ChannelSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		7E21A3EE2B1CC48F000C1E06 /* SFPro_Font_License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = SFPro_Font_License.rtf; sourceTree = "<group>"; };
 		7E21A3EF2B1CC48F000C1E06 /* SFProText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.ttf"; sourceTree = "<group>"; };
 		7E21A3FF2B1CD921000C1E06 /* ChannelCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCellDelegate.swift; sourceTree = "<group>"; };
+		7E8661DB2B1D123500AD55B1 /* ChannelSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		7E21A3C02B1A62E4000C1E06 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7E8661DA2B1D11FA00AD55B1 /* ChannelSearchBar */,
 				7E21A3CA2B1A727D000C1E06 /* ChannelTableViewCell */,
 				7E21A3C12B1A62F1000C1E06 /* ImageView+Loader */,
 			);
@@ -286,6 +289,14 @@
 				7E21A3FF2B1CD921000C1E06 /* ChannelCellDelegate.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7E8661DA2B1D11FA00AD55B1 /* ChannelSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				7E8661DB2B1D123500AD55B1 /* ChannelSearchBar.swift */,
+			);
+			path = ChannelSearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				7E21A3962B1A4B43000C1E06 /* AppDelegate.swift in Sources */,
 				7E21A3AB2B1A4C95000C1E06 /* NetworkService.swift in Sources */,
 				7E21A3D72B1A7623000C1E06 /* PersistanceService.swift in Sources */,
+				7E8661DC2B1D123500AD55B1 /* ChannelSearchBar.swift in Sources */,
 				7E21A3B32B1A523C000C1E06 /* ChannelsList.swift in Sources */,
 				7E21A3B72B1A5665000C1E06 /* TVShow.swift in Sources */,
 			);

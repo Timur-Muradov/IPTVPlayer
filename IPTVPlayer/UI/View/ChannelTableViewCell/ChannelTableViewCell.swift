@@ -20,6 +20,7 @@ final class ChannelTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         titleLabel.text = ""
         tvShowLabel.text = ""
         logoImageView.image = nil

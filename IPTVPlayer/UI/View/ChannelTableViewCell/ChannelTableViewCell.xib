@@ -22,7 +22,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFz-R8-hOf">
+                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFz-R8-hOf">
                         <rect key="frame" x="16" y="8" width="343" height="76"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7k-6k-b2G">
@@ -49,30 +49,45 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Детско-юношеский телеканал «Карусель»" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-6t-067">
-                                <rect key="frame" x="76" y="12" width="219" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-nZ-k8Y">
+                                <rect key="frame" x="166" y="0.0" width="39" height="5.666666666666667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Детско-юношеский телеканал «Карусель»" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-6t-067">
+                                <rect key="frame" x="76" y="5.6666666666666643" width="219" height="43"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnV-K4-hQS">
-                                <rect key="frame" x="76" y="46" width="219" height="18"/>
+                                <rect key="frame" x="76" y="52.666666666666664" width="219" height="17.999999999999993"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                 <color key="textColor" red="0.9137254901960784" green="0.91764705882352937" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hkh-BZ-ygN">
+                                <rect key="frame" x="168.66666666666666" y="70.666666666666671" width="34" height="5.3333333333333286"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="E7k-6k-b2G" secondAttribute="trailing" constant="8" id="0la-YM-wt1"/>
+                            <constraint firstItem="c8M-nZ-k8Y" firstAttribute="width" secondItem="wJ8-6t-067" secondAttribute="width" multiplier="0.178082" id="1zv-pi-AZ1"/>
+                            <constraint firstItem="Hkh-BZ-ygN" firstAttribute="centerX" secondItem="CnV-K4-hQS" secondAttribute="centerX" id="6jY-dk-Khk"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="76" id="8UF-6k-2Hx"/>
                             <constraint firstItem="E7k-6k-b2G" firstAttribute="leading" secondItem="CnV-K4-hQS" secondAttribute="trailing" constant="8" id="CRQ-RZ-dlj"/>
                             <constraint firstItem="E7k-6k-b2G" firstAttribute="centerY" secondItem="RFz-R8-hOf" secondAttribute="centerY" id="EIC-66-p4a"/>
+                            <constraint firstAttribute="bottom" secondItem="Hkh-BZ-ygN" secondAttribute="bottom" id="FD1-sn-MoY"/>
                             <constraint firstItem="CnV-K4-hQS" firstAttribute="top" secondItem="wJ8-6t-067" secondAttribute="bottom" constant="4" id="I6z-Ir-9pM"/>
+                            <constraint firstItem="c8M-nZ-k8Y" firstAttribute="top" secondItem="RFz-R8-hOf" secondAttribute="top" id="LRm-pR-vkO"/>
+                            <constraint firstItem="c8M-nZ-k8Y" firstAttribute="centerX" secondItem="wJ8-6t-067" secondAttribute="centerX" id="OWA-GF-JzL"/>
                             <constraint firstItem="Sav-aH-80L" firstAttribute="centerY" secondItem="RFz-R8-hOf" secondAttribute="centerY" id="QGE-jb-DHf"/>
+                            <constraint firstItem="Hkh-BZ-ygN" firstAttribute="width" secondItem="CnV-K4-hQS" secondAttribute="width" multiplier="0.155251" id="S3Q-I7-neU"/>
                             <constraint firstItem="E7k-6k-b2G" firstAttribute="leading" secondItem="wJ8-6t-067" secondAttribute="trailing" constant="8" id="V8x-Hs-5jO"/>
-                            <constraint firstItem="wJ8-6t-067" firstAttribute="top" secondItem="RFz-R8-hOf" secondAttribute="top" constant="12" id="eu5-gM-G0P"/>
-                            <constraint firstAttribute="bottom" secondItem="CnV-K4-hQS" secondAttribute="bottom" constant="12" id="mdC-Xc-L9L"/>
+                            <constraint firstItem="Hkh-BZ-ygN" firstAttribute="top" secondItem="CnV-K4-hQS" secondAttribute="bottom" id="W1r-my-gNw"/>
+                            <constraint firstItem="wJ8-6t-067" firstAttribute="top" secondItem="c8M-nZ-k8Y" secondAttribute="bottom" id="aGF-cv-KWm"/>
+                            <constraint firstItem="Hkh-BZ-ygN" firstAttribute="height" secondItem="c8M-nZ-k8Y" secondAttribute="height" id="crN-p4-pQe"/>
                             <constraint firstItem="Sav-aH-80L" firstAttribute="leading" secondItem="RFz-R8-hOf" secondAttribute="leading" constant="8" id="otB-ef-g6a"/>
                             <constraint firstItem="wJ8-6t-067" firstAttribute="leading" secondItem="Sav-aH-80L" secondAttribute="trailing" constant="8" id="tG1-UD-fNN"/>
                             <constraint firstItem="CnV-K4-hQS" firstAttribute="leading" secondItem="Sav-aH-80L" secondAttribute="trailing" constant="8" id="wIs-gB-g4G"/>
@@ -80,6 +95,18 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                <real key="value" value="0.80000000000000004"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                <size key="value" width="0.0" height="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                <color key="value" white="0.0" alpha="0.082574503311258277" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
