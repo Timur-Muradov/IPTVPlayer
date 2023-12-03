@@ -8,6 +8,7 @@
 import Foundation
 
 struct ChannelViewModel: StreamingData, Codable, Equatable {
+    let id: Int
     let logo: URL?
     let title: String
     let currentShow: String
@@ -19,6 +20,7 @@ struct ChannelViewModel: StreamingData, Codable, Equatable {
     }
     
     init(from channel: Channel) {
+        self.id = channel.id
         self.logo = URL(string: channel.image) ?? nil
         self.title = channel.nameRu
         self.currentShow = channel.current.title

@@ -52,7 +52,7 @@ final class DataProvider: DataSource {
     
     func toggleFavorite(_ channels: [ChannelViewModel]) {
         for channel in channels {
-            if let index = self.channels.firstIndex(of: channel) {
+            if let index = self.channels.firstIndex(where: { $0.id == channel.id }) {
                 self.channels[index].toggleFavorite()
             } else {
                 debugPrint("\(channel.title) channel is unavailable")

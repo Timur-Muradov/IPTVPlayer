@@ -8,74 +8,102 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
+        <array key="SFProText-Regular.ttf">
+            <string>SFProText-Regular</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChannelsListViewController" customModule="IPTVPlayer" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelTableViewCell" id="KGk-i7-Jjw" customClass="ChannelTableViewCell" customModule="IPTVPlayer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="344" height="76"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelTableViewCell" id="KGk-i7-Jjw" customClass="ChannelTableViewCell" customModule="IPTVPlayer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="344" height="76"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9u-qB-n41">
-                        <rect key="frame" x="8" y="8" width="60" height="60"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFz-R8-hOf">
+                        <rect key="frame" x="16" y="8" width="343" height="76"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7k-6k-b2G">
+                                <rect key="frame" x="303" y="22" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="6aS-tT-M62"/>
+                                    <constraint firstAttribute="height" constant="32" id="dm1-Se-B6F"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="starInactive"/>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aL8-Ua-fyP"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-aH-80L" customClass="ImageViewWithLoader" customModule="IPTVPlayer" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MqA-rI-fyD"/>
+                                    <constraint firstAttribute="width" constant="60" id="opO-LD-PsU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Детско-юношеский телеканал «Карусель»" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-6t-067">
+                                <rect key="frame" x="76" y="12" width="219" height="30"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnV-K4-hQS">
+                                <rect key="frame" x="76" y="46" width="219" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="0.9137254901960784" green="0.91764705882352937" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="60" id="A7D-Pq-VyD"/>
-                            <constraint firstAttribute="width" constant="60" id="zXO-66-rVW"/>
+                            <constraint firstAttribute="trailing" secondItem="E7k-6k-b2G" secondAttribute="trailing" constant="8" id="0la-YM-wt1"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="76" id="8UF-6k-2Hx"/>
+                            <constraint firstItem="E7k-6k-b2G" firstAttribute="leading" secondItem="CnV-K4-hQS" secondAttribute="trailing" constant="8" id="CRQ-RZ-dlj"/>
+                            <constraint firstItem="E7k-6k-b2G" firstAttribute="centerY" secondItem="RFz-R8-hOf" secondAttribute="centerY" id="EIC-66-p4a"/>
+                            <constraint firstItem="CnV-K4-hQS" firstAttribute="top" secondItem="wJ8-6t-067" secondAttribute="bottom" constant="4" id="I6z-Ir-9pM"/>
+                            <constraint firstItem="Sav-aH-80L" firstAttribute="centerY" secondItem="RFz-R8-hOf" secondAttribute="centerY" id="QGE-jb-DHf"/>
+                            <constraint firstItem="E7k-6k-b2G" firstAttribute="leading" secondItem="wJ8-6t-067" secondAttribute="trailing" constant="8" id="V8x-Hs-5jO"/>
+                            <constraint firstItem="wJ8-6t-067" firstAttribute="top" secondItem="RFz-R8-hOf" secondAttribute="top" constant="12" id="eu5-gM-G0P"/>
+                            <constraint firstAttribute="bottom" secondItem="CnV-K4-hQS" secondAttribute="bottom" constant="12" id="mdC-Xc-L9L"/>
+                            <constraint firstItem="Sav-aH-80L" firstAttribute="leading" secondItem="RFz-R8-hOf" secondAttribute="leading" constant="8" id="otB-ef-g6a"/>
+                            <constraint firstItem="wJ8-6t-067" firstAttribute="leading" secondItem="Sav-aH-80L" secondAttribute="trailing" constant="8" id="tG1-UD-fNN"/>
+                            <constraint firstItem="CnV-K4-hQS" firstAttribute="leading" secondItem="Sav-aH-80L" secondAttribute="trailing" constant="8" id="wIs-gB-g4G"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eku-pF-RWk">
-                        <rect key="frame" x="76" y="7.9999999999999982" width="220" height="21.333333333333329"/>
-                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6f-RH-kU8">
-                        <rect key="frame" x="76" y="47" width="220" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iri-41-wNl">
-                        <rect key="frame" x="304" y="22" width="32" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="32" id="JuX-nS-vVU"/>
-                            <constraint firstAttribute="height" constant="32" id="uO4-bR-Zzg"/>
-                        </constraints>
-                    </imageView>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="iri-41-wNl" firstAttribute="leading" secondItem="k6f-RH-kU8" secondAttribute="trailing" constant="8" id="1mF-TJ-cFN"/>
-                    <constraint firstItem="iri-41-wNl" firstAttribute="leading" secondItem="Eku-pF-RWk" secondAttribute="trailing" constant="8" id="GV2-Rv-4Ld"/>
-                    <constraint firstItem="iri-41-wNl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OJD-nr-DyJ"/>
-                    <constraint firstItem="k6f-RH-kU8" firstAttribute="leading" secondItem="e9u-qB-n41" secondAttribute="trailing" constant="8" id="PeM-cu-inG"/>
-                    <constraint firstItem="Eku-pF-RWk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Rn6-T2-oQJ"/>
-                    <constraint firstItem="e9u-qB-n41" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VaA-Nq-V5a"/>
-                    <constraint firstItem="e9u-qB-n41" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Xzf-Lf-oeH"/>
-                    <constraint firstAttribute="bottom" secondItem="k6f-RH-kU8" secondAttribute="bottom" constant="8" id="bHI-LE-7gq"/>
-                    <constraint firstAttribute="trailing" secondItem="iri-41-wNl" secondAttribute="trailing" constant="8" id="n9f-z7-T2S"/>
-                    <constraint firstItem="Eku-pF-RWk" firstAttribute="leading" secondItem="e9u-qB-n41" secondAttribute="trailing" constant="8" id="uw4-LI-icf"/>
-                    <constraint firstAttribute="bottom" secondItem="e9u-qB-n41" secondAttribute="bottom" constant="8" id="vmA-vE-Ofu"/>
+                    <constraint firstItem="RFz-R8-hOf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="8Hs-W4-oi1"/>
+                    <constraint firstItem="RFz-R8-hOf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GAv-vU-21D"/>
+                    <constraint firstAttribute="trailing" secondItem="RFz-R8-hOf" secondAttribute="trailing" constant="16" id="INm-I6-BGc"/>
+                    <constraint firstAttribute="bottom" secondItem="RFz-R8-hOf" secondAttribute="bottom" constant="8" id="JVR-Mi-tqy"/>
                 </constraints>
-                <userDefinedRuntimeAttributes>
-                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                        <integer key="value" value="10"/>
-                    </userDefinedRuntimeAttribute>
-                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="titleLabel" destination="Eku-pF-RWk" id="QaE-I2-wrB"/>
-                <outlet property="tvShowLabel" destination="k6f-RH-kU8" id="EJt-hh-ROX"/>
+                <outlet property="favoriteButton" destination="E7k-6k-b2G" id="Ile-fh-EXy"/>
+                <outlet property="logoImageView" destination="Sav-aH-80L" id="LjY-ZP-yMQ"/>
+                <outlet property="titleLabel" destination="wJ8-6t-067" id="K6F-XG-8DO"/>
+                <outlet property="tvShowLabel" destination="CnV-K4-hQS" id="5mo-nC-32Z"/>
             </connections>
-            <point key="canvasLocation" x="6" y="20"/>
+            <point key="canvasLocation" x="5.343511450381679" y="19.718309859154932"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="starInactive" width="32" height="32"/>
+    </resources>
 </document>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChannelsListViewController: UITableViewController {
+class ChannelsListViewController: UITableViewController, ChannelCellDelegate {
     var dataSource: DataSource?
     
     override func viewDidLoad() {
@@ -37,9 +37,14 @@ class ChannelsListViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChannelTableViewCell", for: indexPath) as? ChannelTableViewCell else {
             return UITableViewCell()
         }
-        
-        cell.titleLabel.text = dataSource?.channels[indexPath.row].title
+        cell.delegate = self
+        cell.channel = dataSource?.channels[indexPath.row]
         return cell
+    }
+    
+    func toggleFavorite(_ channel: ChannelViewModel) {
+        dataSource?.toggleFavorite([channel])
+        tableView.reloadData()
     }
 }
 
