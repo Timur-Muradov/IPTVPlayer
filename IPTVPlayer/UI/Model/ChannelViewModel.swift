@@ -14,11 +14,7 @@ struct ChannelViewModel: StreamingData, Codable, Equatable {
     let currentShow: String
     let playlistURL: URL?
     var isFavorite: Bool
-    
-    mutating func toggleFavorite() {
-        isFavorite = !isFavorite
-    }
-    
+        
     init(from channel: Channel) {
         self.id = channel.id
         self.logo = URL(string: channel.image) ?? nil

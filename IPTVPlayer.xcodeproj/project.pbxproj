@@ -229,8 +229,8 @@
 		7E21A3C62B1A6F59000C1E06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7E21A3D12B1A7411000C1E06 /* Protocol */,
 				7E21A3C72B1A6F7C000C1E06 /* ChannelViewModel.swift */,
+				7E21A3D12B1A7411000C1E06 /* Protocol */,
 			);
 			path = Model;
 			sourceTree = "<group>";

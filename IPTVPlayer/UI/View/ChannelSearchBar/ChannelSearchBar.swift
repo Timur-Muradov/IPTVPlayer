@@ -8,17 +8,54 @@
 import UIKit
 
 class ChannelSearchBar: UISearchBar {
-    
-    override class func awakeFromNib() {
-        super.awakeFromNib()
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+//        if let textfield = self.value(forKey: "searchField") as? UITextField {
+//            textfield.textColor = UIColor(red: 143 / 255,
+//                                          green: 144 / 255,
+//                                          blue: 151 / 255,
+//                                          alpha: 1)
+//
+//            barTintColor = UIColor(red: 64 / 255,
+//                                   green: 66 / 255,
+//                                   blue: 71 / 255,
+//                                   alpha: 1)
+//            backgroundImage = nil
+//            isTranslucent = false
+//            backgroundColor = UIColor(red: 52 / 255,
+//                                      green: 52 / 255,
+//                                      blue: 56 / 255,
+//                                      alpha: 1)
+//
+//        }
     }
+}
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+extension ChannelSearchBar {
+    func setTextFieldColor(_ color: UIColor) {
+        for subView in self.subviews {
+            for subSubView in subView.subviews {
+                let view = subSubView as? UITextInputTraits
+                if view != nil {
+                    let textField = view as? UITextField
+                    textField?.backgroundColor = color
+                    setTextFieldColor(UIColor(red: 52 / 255,
+                                              green: 52 / 255, blue: 56 / 255, alpha: 1))
+                    
+                    break
+                }
+            }
+        }
     }
-    */
+}
 
+extension ChannelSearchBar {
+    func setPlaceholderColor(_ color: UIColor) {
+        let textField = self.value(forKey: "searchField") as? UITextField
+        let placeholder = textField!.value(forKey: "placeholderLabel") as? UILabel
+        placeholder?.textColor = UIColor(red: 143 / 255,
+                                         green: 144 / 255,
+                                         blue: 151 / 255,
+                                         alpha: 1)
+    }
 }

@@ -11,10 +11,30 @@ enum ChannelsListFilter {
     case all, favorites, none
 }
 
-class ChannelsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ChannelCellDelegate, UISearchBarDelegate {
+class ChannelsListViewController: UIViewController, ChannelCellDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var allChannelsButton: FilterButton!
+    @IBOutlet weak var favoriteChannelsButton: FilterButton!
+    @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
+    
     var dataSource: DataSource?
-    var filter: ChannelsListFilter = .none
+    var filter: ChannelsListFilter = .none {
+        didSet {
+            switch filter {
+            case .all:
+                allChannelsButton.makeActive(true)
+                favoriteChannelsButton.makeActive(false)
+            case .favorites:
+                allChannelsButton.makeActive(false)
+                favoriteChannelsButton.makeActive(true)
+            default:
+                allChannelsButton.makeActive(true)
+                favoriteChannelsButton.makeActive(false)
+            }
+        }
+    }
     var channels: [ChannelViewModel] = []
     
     override func viewDidLoad() {
@@ -25,7 +45,16 @@ class ChannelsListViewController: UIViewController, UITableViewDelegate, UITable
             self.channels = self.dataSource?.channels ?? []
             self.filter = .all
             self.configureUI()
+            
+            self.searchTextField.attributedPlaceholder =
+            NSAttributedString(string: "Напишите название канала", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 143 / 255, green: 144 / 255, blue: 151 / 255, alpha: 1)])
+            
+            self.searchTextField.textColor = UIColor(red: 143 / 255, green: 144 / 255, blue: 151 / 255, alpha: 1)
         }
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
     
     func configureUI() {
@@ -39,61 +68,20 @@ class ChannelsListViewController: UIViewController, UITableViewDelegate, UITable
         }
         self.tableView.reloadData()
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.channels.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChannelTableViewCell", for: indexPath) as? ChannelTableViewCell else {
-            return UITableViewCell()
-        }
-        cell.delegate = self
-        cell.channel = channels[indexPath.row]
-        return cell
-    }
-            
+        
     func toggleFavorite(_ channel: ChannelViewModel) {
         dataSource?.toggleFavorite([channel])
         self.configureUI()
     }
     
-    @IBAction func showAllChannels(_ sender: Any) {
+    @IBAction func showAllChannels(_ sender: FilterButton) {
         self.filter = .all
         self.configureUI()
     }
     
-    @IBAction func showFavoriteChannels(_ sender: Any) {
+    @IBAction func showFavoriteChannels(_ sender: FilterButton) {
         self.filter = .favorites
         self.configureUI()
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if let predicate = searchBar.text, !predicate.isEmpty {
-            switch filter {
-            case .all:
-                self.channels = dataSource?.channels.filter({
-                    $0.title.contains(predicate)
-                }) ?? []
-            case .favorites:
-                self.channels = dataSource?.favoriteChannels.filter({
-                    $0.title.contains(predicate)
-                }) ?? []
-            default:
-                self.channels = []
-            }
-        } else {
-            self.channels = dataSource?.channels ?? []
-        }
-        channels = dataSource?.channels.filter({
-            $0.title.contains(searchBar.text ?? "")
-        }) ?? []
-        tableView.reloadData()
-        return true
     }
 }
 
