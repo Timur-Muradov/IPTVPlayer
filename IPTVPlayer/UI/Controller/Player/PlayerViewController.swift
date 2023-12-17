@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class PlayerViewController: UIViewController {
-    
+    @IBOutlet weak var interfaceView: UIView!
     @IBOutlet weak var videoProgress: UIProgressView!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var videoTimeLabel: UILabel!
@@ -22,7 +22,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet var resolutionButtons: [ResolutionButton]!
     private var videoResolution: VideoResolution = .auto {
         didSet {
-            updateQualityButtons(videoResolution)
+            updateResolutionButtons(videoResolution)
             switch videoResolution {
             case .auto:
                 let item = channel.defaultItem.item
@@ -38,6 +38,7 @@ class PlayerViewController: UIViewController {
     }
     
     private var player: AVPlayer = AVPlayer()
+    private var timer: Timer = Timer()
     var channel: ChannelViewModel!
     
     override func viewDidLoad() {
@@ -66,7 +67,7 @@ class PlayerViewController: UIViewController {
         
         tvShowLabel.text = channel.currentShow
         channelNameLabel.text = channel.title
-        changeResolutionStackView.isHidden = true
+        changeResolutionStackView.alpha = 0.0
         
         if let imageUrl = channel?.logo {
             channelImageView.loadImageWithUrl(imageUrl)
@@ -83,17 +84,43 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func settingButton(_ sender: UIButton) {
-        changeResolutionStackView.isHidden = !changeResolutionStackView.isHidden
-        updateQualityButtons(self.videoResolution)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.changeResolutionStackView.alpha = self.changeResolutionStackView.alpha == 1.0 ? 0.0 : 1.0
+        })
+        updateResolutionButtons(self.videoResolution)
+        updateTimer()
     }
     
-    @IBAction func toggleQuality(_ sender: ResolutionButton) {
+    @IBAction func toggleResolution(_ sender: ResolutionButton) {
         self.videoResolution = VideoResolution(rawValue: sender.tag) ?? .auto
     }
     
-    private func updateQualityButtons(_ active: VideoResolution) {
+    private func updateResolutionButtons(_ active: VideoResolution) {
         for button in resolutionButtons {
             button.makeActive(button.tag == active.rawValue ? true : false)
         }
+    }
+    
+    @IBAction func toggleInterfaceView() {
+        if interfaceView.alpha == 0.0 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.interfaceView.alpha = 1.0
+            })
+            updateTimer()
+        } else {
+            hideInterfaceView()
+        }
+    }
+    
+    private func updateTimer() {
+        self.timer.invalidate()
+        self.timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(hideInterfaceView), userInfo: nil, repeats: false)
+    }
+    
+    @objc private func hideInterfaceView() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.changeResolutionStackView.alpha = 0.0
+            self.interfaceView.alpha = 0.0
+        })
     }
 }
