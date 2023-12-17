@@ -64,13 +64,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-18-X6j">
                                         <rect key="frame" x="33" y="58" width="327" height="48"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="KQS-06-VAP">
-                                                <rect key="frame" x="8" y="12" width="24" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Напишите название канала" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIW-vg-yth">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="Напишите название канала" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIW-vg-yth">
                                                 <rect key="frame" x="40" y="8" width="279" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.25098039220000001" green="0.25882352939999997" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <attributedString key="attributedText"/>
@@ -79,12 +74,21 @@
                                                     <outlet property="delegate" destination="dFh-ow-ahK" id="dBj-hV-7Gn"/>
                                                 </connections>
                                             </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="KQS-06-VAP">
+                                                <rect key="frame" x="8" y="12" width="24" height="24"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.25098039220000001" green="0.25882352939999997" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="NIW-vg-yth" firstAttribute="leading" secondItem="KQS-06-VAP" secondAttribute="trailing" constant="8" id="0kB-WC-IO7"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="0qF-5p-yGc"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="9lW-0Q-ofy"/>
+                                            <constraint firstItem="KQS-06-VAP" firstAttribute="top" secondItem="WBg-18-X6j" secondAttribute="top" constant="12" id="JQa-bY-2eU"/>
                                             <constraint firstAttribute="width" constant="327" id="PFI-ag-MxD"/>
+                                            <constraint firstAttribute="trailing" secondItem="NIW-vg-yth" secondAttribute="trailing" constant="8" id="TYi-14-PfT"/>
+                                            <constraint firstItem="KQS-06-VAP" firstAttribute="leading" secondItem="WBg-18-X6j" secondAttribute="leading" constant="8" id="emb-t4-osa"/>
+                                            <constraint firstAttribute="bottom" secondItem="NIW-vg-yth" secondAttribute="bottom" constant="8" id="hAb-uo-0R6"/>
+                                            <constraint firstItem="NIW-vg-yth" firstAttribute="top" secondItem="WBg-18-X6j" secondAttribute="top" constant="8" id="oVj-0t-71B"/>
                                             <constraint firstAttribute="height" constant="48" id="qok-HZ-Pnc"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>

@@ -24,7 +24,7 @@
 		7E21A3C82B1A6F7C000C1E06 /* ChannelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3C72B1A6F7C000C1E06 /* ChannelViewModel.swift */; };
 		7E21A3CD2B1A72FC000C1E06 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3CB2B1A72FC000C1E06 /* ChannelTableViewCell.swift */; };
 		7E21A3CE2B1A72FC000C1E06 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A3CC2B1A72FC000C1E06 /* ChannelTableViewCell.xib */; };
-		7E21A3D02B1A7383000C1E06 /* StreamingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3CF2B1A7383000C1E06 /* StreamingData.swift */; };
+		7E21A3D02B1A7383000C1E06 /* StreamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3CF2B1A7383000C1E06 /* StreamData.swift */; };
 		7E21A3D72B1A7623000C1E06 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3D62B1A7623000C1E06 /* PersistanceService.swift */; };
 		7E21A3D92B1A7EB7000C1E06 /* FavoriteChannelsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3D82B1A7EB7000C1E06 /* FavoriteChannelsService.swift */; };
 		7E21A3DB2B1A8515000C1E06 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3DA2B1A8514000C1E06 /* DataSource.swift */; };
@@ -44,12 +44,16 @@
 		7E21A3FC2B1CC48F000C1E06 /* SFPro_Font_License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A3EE2B1CC48F000C1E06 /* SFPro_Font_License.rtf */; };
 		7E21A3FD2B1CC48F000C1E06 /* SFProText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E21A3EF2B1CC48F000C1E06 /* SFProText-Bold.ttf */; };
 		7E21A4002B1CD921000C1E06 /* ChannelCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21A3FF2B1CD921000C1E06 /* ChannelCellDelegate.swift */; };
+		7E44F2542B2F170C0024FB23 /* StreamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E44F2532B2F170C0024FB23 /* StreamItem.swift */; };
+		7E44F2562B2F18010024FB23 /* VideoResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E44F2552B2F18010024FB23 /* VideoResolution.swift */; };
+		7E44F2582B2F19F10024FB23 /* StreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E44F2572B2F19F10024FB23 /* StreamModel.swift */; };
+		7E44F25A2B2F1F650024FB23 /* M3U8Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E44F2592B2F1F650024FB23 /* M3U8Parser.swift */; };
 		7E6DE2182B26335700514B73 /* ChannelsListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6DE2172B26335700514B73 /* ChannelsListViewController+TableView.swift */; };
 		7E6DE21A2B26344C00514B73 /* ChannelsListViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6DE2192B26344C00514B73 /* ChannelsListViewController+TextField.swift */; };
-		7E8661DC2B1D123500AD55B1 /* ChannelSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8661DB2B1D123500AD55B1 /* ChannelSearchBar.swift */; };
 		7ECC9C5F2B20801D0045067A /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECC9C5D2B20801D0045067A /* PlayerViewController.swift */; };
 		7ECC9C602B20801D0045067A /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECC9C5E2B20801D0045067A /* PlayerViewController.xib */; };
 		7ED1D12F2B1DF0E4001B1C9F /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED1D12E2B1DF0E4001B1C9F /* FilterButton.swift */; };
+		7EF53F922B2C701F00FD486E /* ResolutionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF53F912B2C701F00FD486E /* ResolutionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,7 +89,7 @@
 		7E21A3C72B1A6F7C000C1E06 /* ChannelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewModel.swift; sourceTree = "<group>"; };
 		7E21A3CB2B1A72FC000C1E06 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
 		7E21A3CC2B1A72FC000C1E06 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
-		7E21A3CF2B1A7383000C1E06 /* StreamingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingData.swift; sourceTree = "<group>"; };
+		7E21A3CF2B1A7383000C1E06 /* StreamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamData.swift; sourceTree = "<group>"; };
 		7E21A3D62B1A7623000C1E06 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 		7E21A3D82B1A7EB7000C1E06 /* FavoriteChannelsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteChannelsService.swift; sourceTree = "<group>"; };
 		7E21A3DA2B1A8514000C1E06 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
@@ -105,12 +109,16 @@
 		7E21A3EE2B1CC48F000C1E06 /* SFPro_Font_License.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = SFPro_Font_License.rtf; sourceTree = "<group>"; };
 		7E21A3EF2B1CC48F000C1E06 /* SFProText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Bold.ttf"; sourceTree = "<group>"; };
 		7E21A3FF2B1CD921000C1E06 /* ChannelCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCellDelegate.swift; sourceTree = "<group>"; };
+		7E44F2532B2F170C0024FB23 /* StreamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamItem.swift; sourceTree = "<group>"; };
+		7E44F2552B2F18010024FB23 /* VideoResolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResolution.swift; sourceTree = "<group>"; };
+		7E44F2572B2F19F10024FB23 /* StreamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamModel.swift; sourceTree = "<group>"; };
+		7E44F2592B2F1F650024FB23 /* M3U8Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3U8Parser.swift; sourceTree = "<group>"; };
 		7E6DE2172B26335700514B73 /* ChannelsListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelsListViewController+TableView.swift"; sourceTree = "<group>"; };
 		7E6DE2192B26344C00514B73 /* ChannelsListViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelsListViewController+TextField.swift"; sourceTree = "<group>"; };
-		7E8661DB2B1D123500AD55B1 /* ChannelSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSearchBar.swift; sourceTree = "<group>"; };
 		7ECC9C5D2B20801D0045067A /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		7ECC9C5E2B20801D0045067A /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 		7ED1D12E2B1DF0E4001B1C9F /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		7EF53F912B2C701F00FD486E /* ResolutionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,8 +218,8 @@
 		7E21A3C02B1A62E4000C1E06 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7EF53F932B2C702700FD486E /* ResolutionButton */,
 				7ED1D12D2B1DF0B9001B1C9F /* FilterButton */,
-				7E8661DA2B1D11FA00AD55B1 /* ChannelSearchBar */,
 				7E21A3CA2B1A727D000C1E06 /* ChannelTableViewCell */,
 				7E21A3C12B1A62F1000C1E06 /* ImageView+Loader */,
 			);
@@ -230,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				7E21A3C72B1A6F7C000C1E06 /* ChannelViewModel.swift */,
+				7E44F2572B2F19F10024FB23 /* StreamModel.swift */,
 				7E21A3D12B1A7411000C1E06 /* Protocol */,
 			);
 			path = Model;
@@ -238,11 +247,8 @@
 		7E21A3C92B1A7239000C1E06 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7E21A3992B1A4B43000C1E06 /* ChannelsListViewController.swift */,
-				7E6DE2172B26335700514B73 /* ChannelsListViewController+TableView.swift */,
-				7E6DE2192B26344C00514B73 /* ChannelsListViewController+TextField.swift */,
-				7ECC9C5D2B20801D0045067A /* PlayerViewController.swift */,
-				7ECC9C5E2B20801D0045067A /* PlayerViewController.xib */,
+				7EF53F902B2C694300FD486E /* Player */,
+				7EF53F8F2B2C691A00FD486E /* ChannelsList */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 		7E21A3D12B1A7411000C1E06 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				7E21A3CF2B1A7383000C1E06 /* StreamingData.swift */,
+				7E21A3CF2B1A7383000C1E06 /* StreamData.swift */,
+				7E44F2532B2F170C0024FB23 /* StreamItem.swift */,
+				7E44F2552B2F18010024FB23 /* VideoResolution.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -319,20 +327,40 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		7E8661DA2B1D11FA00AD55B1 /* ChannelSearchBar */ = {
-			isa = PBXGroup;
-			children = (
-				7E8661DB2B1D123500AD55B1 /* ChannelSearchBar.swift */,
-			);
-			path = ChannelSearchBar;
-			sourceTree = "<group>";
-		};
 		7ED1D12D2B1DF0B9001B1C9F /* FilterButton */ = {
 			isa = PBXGroup;
 			children = (
 				7ED1D12E2B1DF0E4001B1C9F /* FilterButton.swift */,
 			);
 			path = FilterButton;
+			sourceTree = "<group>";
+		};
+		7EF53F8F2B2C691A00FD486E /* ChannelsList */ = {
+			isa = PBXGroup;
+			children = (
+				7E6DE2192B26344C00514B73 /* ChannelsListViewController+TextField.swift */,
+				7E6DE2172B26335700514B73 /* ChannelsListViewController+TableView.swift */,
+				7E21A3992B1A4B43000C1E06 /* ChannelsListViewController.swift */,
+			);
+			path = ChannelsList;
+			sourceTree = "<group>";
+		};
+		7EF53F902B2C694300FD486E /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				7ECC9C5D2B20801D0045067A /* PlayerViewController.swift */,
+				7ECC9C5E2B20801D0045067A /* PlayerViewController.xib */,
+				7E44F2592B2F1F650024FB23 /* M3U8Parser.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		7EF53F932B2C702700FD486E /* ResolutionButton */ = {
+			isa = PBXGroup;
+			children = (
+				7EF53F912B2C701F00FD486E /* ResolutionButton.swift */,
+			);
+			path = ResolutionButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,27 +451,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E21A3D02B1A7383000C1E06 /* StreamingData.swift in Sources */,
+				7E21A3D02B1A7383000C1E06 /* StreamData.swift in Sources */,
 				7E21A3DB2B1A8515000C1E06 /* DataSource.swift in Sources */,
 				7E21A3AD2B1A4D28000C1E06 /* NetworkServiceProvider.swift in Sources */,
 				7E21A3CD2B1A72FC000C1E06 /* ChannelTableViewCell.swift in Sources */,
 				7E21A3B52B1A53CE000C1E06 /* Channel.swift in Sources */,
 				7E21A3C32B1A6E9F000C1E06 /* DataProvider.swift in Sources */,
 				7E21A3D92B1A7EB7000C1E06 /* FavoriteChannelsService.swift in Sources */,
+				7E44F2542B2F170C0024FB23 /* StreamItem.swift in Sources */,
 				7E21A39A2B1A4B43000C1E06 /* ChannelsListViewController.swift in Sources */,
 				7E6DE21A2B26344C00514B73 /* ChannelsListViewController+TextField.swift in Sources */,
 				7E21A3DD2B1BA848000C1E06 /* DataSourceBuilder.swift in Sources */,
 				7ECC9C5F2B20801D0045067A /* PlayerViewController.swift in Sources */,
+				7EF53F922B2C701F00FD486E /* ResolutionButton.swift in Sources */,
 				7E21A4002B1CD921000C1E06 /* ChannelCellDelegate.swift in Sources */,
 				7E21A3B92B1A5675000C1E06 /* ForeignPlayer.swift in Sources */,
 				7E21A3BE2B1A60B0000C1E06 /* ImageViewWithLoader.swift in Sources */,
 				7E21A3C82B1A6F7C000C1E06 /* ChannelViewModel.swift in Sources */,
+				7E44F25A2B2F1F650024FB23 /* M3U8Parser.swift in Sources */,
+				7E44F2582B2F19F10024FB23 /* StreamModel.swift in Sources */,
 				7ED1D12F2B1DF0E4001B1C9F /* FilterButton.swift in Sources */,
 				7E21A3AF2B1A4DAE000C1E06 /* ChannelsNetworkService.swift in Sources */,
+				7E44F2562B2F18010024FB23 /* VideoResolution.swift in Sources */,
 				7E21A3962B1A4B43000C1E06 /* AppDelegate.swift in Sources */,
 				7E21A3AB2B1A4C95000C1E06 /* NetworkService.swift in Sources */,
 				7E21A3D72B1A7623000C1E06 /* PersistanceService.swift in Sources */,
-				7E8661DC2B1D123500AD55B1 /* ChannelSearchBar.swift in Sources */,
 				7E21A3B32B1A523C000C1E06 /* ChannelsList.swift in Sources */,
 				7E21A3B72B1A5665000C1E06 /* TVShow.swift in Sources */,
 				7E6DE2182B26335700514B73 /* ChannelsListViewController+TableView.swift in Sources */,

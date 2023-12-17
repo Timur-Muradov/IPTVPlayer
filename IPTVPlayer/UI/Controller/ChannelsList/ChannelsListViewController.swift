@@ -39,6 +39,7 @@ class ChannelsListViewController: UIViewController, ChannelCellDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         let cellNib = UINib(nibName: "ChannelTableViewCell", bundle: Bundle.main)
         self.tableView.register(cellNib, forCellReuseIdentifier: "ChannelTableViewCell")
         dataSource?.fetchChannelsList {
