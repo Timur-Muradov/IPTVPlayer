@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Foreign player API model
 struct ForeignPlayer: Decodable {
     let sdk: String
     let url: String

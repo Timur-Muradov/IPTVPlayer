@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Data source interface
 protocol DataSource {
     var channels: [ChannelViewModel] { get }
     var favoriteChannels: [ChannelViewModel] { get }

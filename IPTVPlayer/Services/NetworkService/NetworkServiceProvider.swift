@@ -13,9 +13,11 @@ enum Result<T> {
     case empty
 }
 
+/// Network service provider
 final class NetworkServiceProvider<T: NetworkService> {
+    // MARK: - Properties
     var urlSession = URLSession.shared
-
+    // MARK: - Initialization
     init() { }
 
     func load(service: T, completion: @escaping (Result<Data>) -> Void) {
@@ -43,7 +45,7 @@ final class NetworkServiceProvider<T: NetworkService> {
         }
     }
 }
-
+// MARK: - Private interface
 extension NetworkServiceProvider {
     private func call(_ request: URLRequest, deliverQueue: DispatchQueue = DispatchQueue.main, completion: @escaping (Result<Data>) -> Void) {
         urlSession.dataTask(with: request) { (data, _, error) in

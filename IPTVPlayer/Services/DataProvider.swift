@@ -7,18 +7,22 @@
 
 import Foundation
 
+/// Data provider that covers application business logic
 final class DataProvider: DataSource {
+    // MARK: - Private properties
     private let network: NetworkServiceProvider<ChannelsNetworkService>
     private let favoriteService: FavoriteChannelsService
+    // MARK: - Properties
     var channels: [ChannelViewModel] = []
     var favoriteChannels: [ChannelViewModel] = []
-    
+    // MARK: - Initialization
     init(network: NetworkServiceProvider<ChannelsNetworkService>,
          favoriteService: FavoriteChannelsService) {
         self.network = network
         self.favoriteService = favoriteService
     }
     
+    /// Return array of channel view models
     func fetchChannelsList(_ completion: @escaping () -> Void) {
         network.load(service: .channels) { result in
             switch result {
@@ -52,6 +56,8 @@ final class DataProvider: DataSource {
         }
     }
     
+    /// Toggle channels favorite
+    /// - Parameter channels: channels to toggle
     func toggleFavorite(_ channels: [ChannelViewModel]) {
         for channel in channels {
             if let index = self.channels.firstIndex(where: { $0.id == channel.id }) {

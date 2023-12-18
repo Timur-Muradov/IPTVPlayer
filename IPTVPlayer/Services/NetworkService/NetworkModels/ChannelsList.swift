@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Top level channels API model
 struct ChannelsList: Decodable {
     let channels: [Channel]
 }

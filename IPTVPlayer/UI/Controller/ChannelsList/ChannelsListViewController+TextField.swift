@@ -6,15 +6,14 @@
 //
 
 import UIKit
-
-
-
+// MARK: - UITextFieldDelegate
 extension ChannelsListViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
         guard let oldText = textField.text else { return false }
         let text = oldText.replacingCharacters(in: Range(range, in: oldText)!, with: string)
         if !text.isEmpty {
-            debugPrint(text)
             switch filter {
             case .all:
                 self.channels = dataSource?.channels.filter({
@@ -28,7 +27,6 @@ extension ChannelsListViewController: UITextFieldDelegate {
                 self.channels = []
             }
         } else {
-            debugPrint(textField.text ?? "")
             switch filter {
             case .all:
                 self.channels = dataSource?.channels ?? []

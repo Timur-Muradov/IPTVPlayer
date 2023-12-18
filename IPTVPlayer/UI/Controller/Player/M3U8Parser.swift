@@ -7,15 +7,26 @@
 
 import AVKit
 
+/// This helper should download '.m3u8' file and parse it to stream model
+/// Current API does not return '.m3u8' so i cannot be sure if  amount of
+/// channel resolutions is static or dynamic. In case amount of channel
+/// resolutions static i can use different variable for each resolution and
+/// static UI, overwise model and UI should be dynamic.
 final class M3U8Parser {
+    // MARK: - Prevent to create instance.
     private init() {}
-        
+    
+    /// Download and parse '.m3u8' file from URL
+    /// - Parameter url: url to '.m3u8' file
+    /// - Returns: for now it will return mock model
     static func availableItems(_ url: URL) -> [StreamModel] {
+        // TODO: - Add implementation when API will be available
         return mockItems()
     }
 }
-
+// MARK: - Private interface
 private extension M3U8Parser {
+    /// Harcoded stream model for POC
     static func mockItems() -> [StreamModel] {
         var result: [StreamModel] = []
         if let p1080url: URL = URL(string: "http://sample.vodobox.net/skate_phantom_flex_4k/fullhd/skate_phantom_flex_4k_4160_1080p.m3u8") {

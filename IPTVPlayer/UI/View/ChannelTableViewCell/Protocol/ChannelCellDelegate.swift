@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Channel table view cell delegate interface
 protocol ChannelCellDelegate: AnyObject {
     func toggleFavorite(_ channel: ChannelViewModel)
 }

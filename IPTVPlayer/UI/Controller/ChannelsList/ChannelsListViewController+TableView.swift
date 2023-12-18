@@ -6,9 +6,7 @@
 //
 
 import UIKit
-
-
-
+// MARK: - UITableViewDelegate/DataSource
 extension ChannelsListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -19,7 +17,8 @@ extension ChannelsListViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChannelTableViewCell", for: indexPath) as? ChannelTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChannelTableViewCell",
+                                                       for: indexPath) as? ChannelTableViewCell else {
             return UITableViewCell()
         }
         cell.delegate = self

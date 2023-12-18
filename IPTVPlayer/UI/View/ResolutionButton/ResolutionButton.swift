@@ -7,9 +7,8 @@
 
 import UIKit
 
-class ResolutionButton: UIButton {
-    
-        
+/// Custom button for resolution menu
+final class ResolutionButton: UIButton {
     func makeActive(_ flag: Bool) {
         if flag {
             backgroundColor = UIColor(red: 0 / 255,

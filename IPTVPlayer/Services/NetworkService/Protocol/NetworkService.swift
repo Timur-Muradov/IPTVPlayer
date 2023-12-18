@@ -11,6 +11,7 @@ enum ServiceMethod: String {
     case get = "GET"
 }
 
+/// Network service interface
 protocol NetworkService {
     var baseURL: String { get }
     var path: String { get }

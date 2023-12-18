@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Persistance service interface
 protocol PersistanceService {
     associatedtype D
     func load() -> D

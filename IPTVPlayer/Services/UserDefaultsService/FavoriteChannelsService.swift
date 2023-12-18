@@ -11,6 +11,7 @@ enum PersistanceKeys: String {
     case favoriteChannels
 }
 
+/// User defaults persistance service
 final class FavoriteChannelsService: PersistanceService {
     let userDefaults = UserDefaults.standard
     private(set) var dataToSave: [ChannelViewModel]

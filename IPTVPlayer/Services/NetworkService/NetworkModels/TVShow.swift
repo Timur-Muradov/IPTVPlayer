@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// TV show API model
 struct TVShow: Decodable {
     let timestart: Int
     let timestop: Int

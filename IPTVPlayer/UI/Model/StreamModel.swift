@@ -7,6 +7,7 @@
 
 import AVKit
 
+/// View model with stream configuration
 struct StreamModel: StreamItem, Codable, Equatable {
     var URL: URL
     var bandwith: Double

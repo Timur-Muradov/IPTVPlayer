@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Channel API model
 struct Channel: Decodable {
     let id: Int
     let epgId: Int

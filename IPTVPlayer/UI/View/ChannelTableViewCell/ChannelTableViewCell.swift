@@ -7,18 +7,21 @@
 
 import UIKit
 
+/// Channel table view cell
 final class ChannelTableViewCell: UITableViewCell {
+    // MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tvShowLabel: UILabel!
     @IBOutlet weak var logoImageView: ImageViewWithLoader!
     @IBOutlet weak var favoriteButton: UIButton!
+    // MARK: - Properties
     weak var delegate: ChannelCellDelegate?
     var channel: ChannelViewModel? {
         didSet {
             updateUI()
         }
     }
-    
+    // MARK: - Cell life cycle
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = ""
@@ -41,7 +44,7 @@ final class ChannelTableViewCell: UITableViewCell {
             favoriteButton.setImage(UIImage(imageLiteralResourceName: "starInactive"), for: .normal)
         }
     }
-    
+    // MARK: - Actions
     @IBAction func toggleFavorite(_ sender: Any) {
         guard let channel = channel else { return }
         delegate?.toggleFavorite(channel)

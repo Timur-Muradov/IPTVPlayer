@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Chanel network service
 enum ChannelsNetworkService {
     case channels
 }

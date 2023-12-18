@@ -7,8 +7,11 @@
 
 import Foundation
 
+/// Builder for data sourse services
 final class DataSourceBuilder {
+    // Prevent to create instance
     private init() {}
+    /// Return configured data source 
     static func buildDataSource() -> DataSource {
         let network = NetworkServiceProvider<ChannelsNetworkService>()
         let favorite = FavoriteChannelsService()

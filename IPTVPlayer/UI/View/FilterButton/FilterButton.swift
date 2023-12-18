@@ -7,10 +7,11 @@
 
 import UIKit
 
-class FilterButton: UIButton {
-    
+/// Custom button for filter menu
+final class FilterButton: UIButton {
+    // MARK: - Private properties
     private var underscoreView: UIView
-    
+    // MARK: - Initialization
     required init?(coder: NSCoder) {
         underscoreView = UIView(frame: CGRect.zero)
         underscoreView.backgroundColor = UIColor(red: 0,
@@ -28,7 +29,9 @@ class FilterButton: UIButton {
         underscoreView.heightAnchor.constraint(equalToConstant: 2).isActive = true
     }
     
-    func makeActive(_ flag: Bool) {
+    /// Update button to make it looks like active or inactive
+    /// - Parameter flag: Shows button should be active or not
+    func toggleActive(_ flag: Bool) {
         if flag {
             underscoreView.alpha = 1
             titleLabel?.textColor = .white

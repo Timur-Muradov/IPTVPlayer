@@ -7,6 +7,7 @@
 
 import AVKit
 
+/// Stream configuration view model interface
 protocol StreamItem: Codable, Equatable {
     var URL: URL { get }
     var bandwith: Double { get }

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Main view model interface
 protocol StreamData: Codable, Equatable {
     var logo: URL? { get }
     var title: String { get }

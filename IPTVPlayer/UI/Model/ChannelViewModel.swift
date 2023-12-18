@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Main view model
 struct ChannelViewModel: StreamData, Codable, Equatable {
     let id: Int
     let logo: URL?
@@ -17,6 +18,7 @@ struct ChannelViewModel: StreamData, Codable, Equatable {
     var isFavorite: Bool
     
     init?(from channel: Channel) {
+        // TODO: - When API will be available replace mock url string with channel url
         //let urlString = channel.url
         let urlString = "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8"
         guard let url = URL(string: urlString) else { return nil }

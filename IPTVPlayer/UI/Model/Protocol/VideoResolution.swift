@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Available video resolutions
 enum VideoResolution: Int, Codable, Equatable {
     case auto = 0
     case p1080 = 1080
