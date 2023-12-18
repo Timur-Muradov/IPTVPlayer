@@ -32,7 +32,9 @@ final class DataProvider: DataSource {
                     debugPrint(response)
                     var channels: [ChannelViewModel] = []
                     for channel in response.channels {
-                        channels.append(ChannelViewModel(from: channel))
+                        if let model = ChannelViewModel(from: channel) {
+                            channels.append(model)
+                        }
                     }
                     DispatchQueue.main.async {
                         self.channels = channels

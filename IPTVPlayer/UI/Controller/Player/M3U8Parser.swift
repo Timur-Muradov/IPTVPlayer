@@ -9,8 +9,14 @@ import AVKit
 
 final class M3U8Parser {
     private init() {}
-    
+        
     static func availableItems(_ url: URL) -> [StreamModel] {
+        return mockItems()
+    }
+}
+
+private extension M3U8Parser {
+    static func mockItems() -> [StreamModel] {
         var result: [StreamModel] = []
         if let p1080url: URL = URL(string: "http://sample.vodobox.net/skate_phantom_flex_4k/fullhd/skate_phantom_flex_4k_4160_1080p.m3u8") {
             let p1080 = StreamModel(URL: p1080url, bandwith: 5400000, resolution: .p1080)
@@ -31,8 +37,3 @@ final class M3U8Parser {
         return result
     }
 }
-
-//case p1080 = 1080
-//case p720 = 720
-//case p480 = 480
-//case p360 = 360

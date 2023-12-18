@@ -16,13 +16,14 @@ struct ChannelViewModel: StreamData, Codable, Equatable {
     var availableItems: [StreamModel]
     var isFavorite: Bool
     
-    init(from channel: Channel) {
+    init?(from channel: Channel) {
+        //let urlString = channel.url
+        let urlString = "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8"
+        guard let url = URL(string: urlString) else { return nil }
         self.id = channel.id
         self.logo = URL(string: channel.image) ?? nil
         self.title = channel.nameRu
         self.currentShow = channel.current.title
-        //let url = URL(string: channel.url)!
-        let url = URL(string: "http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8")!
         self.defaultItem = StreamModel(URL: url, bandwith: 0, resolution: .auto)
         self.availableItems = M3U8Parser.availableItems(url)
         self.isFavorite = false
