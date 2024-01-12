@@ -1,4 +1,4 @@
-# LimeHD IPTVPlayer
+# IPTVPlayer
 ![IMAGE 2023-12-18 03:30:12](https://github.com/Timur-Muradov/IPTVPlayer/assets/102965817/6161168c-21e3-469d-9077-6c8da2751452)
 ![IMAGE 2023-12-18 03:30:21](https://github.com/Timur-Muradov/IPTVPlayer/assets/102965817/560d29b2-76eb-4cbd-ba70-d1ca9de198d9)
 
