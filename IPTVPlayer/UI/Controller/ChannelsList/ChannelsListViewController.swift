@@ -49,12 +49,12 @@ class ChannelsListViewController: UIViewController, ChannelCellDelegate {
         super.viewDidLoad()
         let cellNib = UINib(nibName: "ChannelTableViewCell", bundle: Bundle.main)
         self.tableView.register(cellNib, forCellReuseIdentifier: "ChannelTableViewCell")
-        dataSource?.fetchChannelsList {
-            self.channels = self.dataSource?.channels ?? []
-            self.filter = .all
-            self.configureUI()
-            self.searchTextField.textColor = UIColor(red: 143 / 255, green: 144 / 255, blue: 151 / 255, alpha: 1)
-            self.searchTextField.attributedPlaceholder = NSAttributedString(
+        dataSource?.fetchChannelsList { [ weak self ] in
+            self?.channels = self?.dataSource?.channels ?? []
+            self?.filter = .all
+            self?.configureUI()
+            self?.searchTextField.textColor = UIColor(red: 143 / 255, green: 144 / 255, blue: 151 / 255, alpha: 1)
+            self?.searchTextField.attributedPlaceholder = NSAttributedString(
                 string: "Напишите название канала",
                 attributes: [
                     NSAttributedString.Key.foregroundColor: UIColor(red: 143 / 255,
